@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { FC } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Login } from '@/presentation/pages'
 
 const Router: FC = () => {
@@ -10,6 +10,6 @@ const Router: FC = () => {
       </Switch>
     </BrowserRouter>
   )
-};
+}
 
-export default Router;
+export default Router
