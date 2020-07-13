@@ -1,4 +1,4 @@
-import { HttpResponse, HttpStatusCode, HttpPostClient, HttpPostParams } from '@/data/protocols/http';
+import { HttpResponse, HttpStatusCode, HttpPostClient, HttpPostParams } from '@/data/protocols/http'
 
 export class HttpPostClientSpy<T, R> implements HttpPostClient<T, R> {
   public url?: string
@@ -6,10 +6,10 @@ export class HttpPostClientSpy<T, R> implements HttpPostClient<T, R> {
   public response: HttpResponse<R> = {
     statusCode: HttpStatusCode.ok
   }
-  
+
   async post (params: HttpPostParams<T>): Promise<HttpResponse<R>> {
-   this.url = params.url;
-   this.body = params.body;
-   return Promise.resolve(this.response);
-  } 
- }
+    this.url = params.url
+    this.body = params.body
+    return this.response
+  }
+}
